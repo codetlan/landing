@@ -1,0 +1,40 @@
+/* CSS declarations go here */
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+//mixins
+.span3{
+  @include span-columns(3);
+}
+
+//header
+.header {
+  @include outer-container;
+  //height:200px;
+  .row-item {
+    @include row();
+    height:35px;
+    margin-bottom:5px;
+    background-color:#ddd;
+  }
+  .logo{
+    @include span-columns(3);
+  }
+  .menu{
+    @include span-columns(6);
+  }
+}
+
+.content1{
+  background-image: url("images/codetlan-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0 -8px 0 -8px;
+  height:em(800);
+}
